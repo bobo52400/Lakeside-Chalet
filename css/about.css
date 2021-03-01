@@ -1,0 +1,141 @@
+@import url(reset.css);
+
+/**{outline: 1px solid orange;}*/
+/*----- 共用 -----*/
+.wrapper{
+	text-align: center;
+	padding-top: 0.1px;
+	width: 1200px;
+	font-family: "微軟正黑體";
+	margin:0 auto;
+}
+
+a{
+	text-decoration: none;
+	display:block;
+	text-align:center;
+	color:black;
+	font-family: "微軟正黑體";
+}
+
+h1{
+	text-align: center;
+	line-height: 4.3;
+    font-size: 18px;
+}
+
+h3{
+	padding-top: 10px;
+}
+
+footer{
+	background-color: rgb(220,216,206);
+	height:200px;
+	line-height: 1.8;
+    font-size: 12px;
+    padding-top: 30px;
+   
+}
+
+footer > a > .logo{
+	display:block;
+	margin:0 auto;
+}
+
+.logo{
+	width:40px;
+}
+/*----- part1 -----*/
+.menus{
+	display:flex;
+	justify-content:center;
+	width:1200px;
+	position:fixed;
+	z-index: 1;
+	background-color: white;
+
+}
+
+.list1{
+	display:flex;
+	justify-content:center;
+	width:600px;
+	margin-left: 120px;
+	margin-right:20px;
+}
+
+.list1 li{
+	writing-mode: vertical-lr;
+	letter-spacing:5px;
+	margin:10px 30px;
+	font-size:14px;
+}
+
+.icon{
+	display:inline-flex;
+	width:100px;
+	justify-content: space-between;
+	align-items:flex-end;
+
+}
+
+.icon a img{
+	margin-bottom:10px;
+}
+
+/*----- content1 -----*/
+.content1{
+	background-color: rgb(224,226,214);
+	height:387px;
+	padding-top: 100px;
+}
+
+.content1 p{
+	line-height: 2;
+	font-size: 14px;
+}
+
+.ending{
+	margin-bottom: 30px;
+}
+.photo{
+ 	width:100%;
+}
+
+
+.content2{
+	background-color: white;
+	height:350px;
+	display:flex;
+	justify-content:center;
+}
+
+.content2 p{
+	width:500px;
+	margin:50px;
+}
+
+.content3{
+	background-color: rgb(231,229,221);
+	height:380px;
+}
+
+.content3 > .line{
+	width: 0.5px;
+	height:70px;
+	background-color: rgb(128,128,127);
+	margin: 0 auto;
+}
+
+.content3 > img{
+	margin-bottom: 10px;
+}
+
+.content3 > p{
+	line-height:1.5;
+}
+
+.content3-1{
+	width:600px;
+	margin:30px auto;
+}

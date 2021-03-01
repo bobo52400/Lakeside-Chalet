@@ -1,0 +1,140 @@
+@import url(reset.css);
+
+*{
+	/*outline: 1px solid orange;*/
+}
+/*----- 共用 -----*/
+.wrapper{
+	text-align: center;
+	padding-top: 0.1px;
+	width: 1200px;
+	margin: 0 auto;
+	font-family: "微軟正黑體";
+}
+
+a{
+	text-decoration: none;
+	display:block;
+	text-align:center;
+	color:black;
+}
+
+h1{
+	text-align: center;
+	line-height: 2.5;
+    font-size: 18px;
+}
+
+footer{
+	background-color: rgb(220,216,206);
+	height:200px;
+	line-height: 1.8;
+    font-size: 12px;
+    padding-top: 30px;
+   
+}
+
+footer > a > .logo{
+	display:block;
+	margin:0 auto;
+}
+.logo{
+	width:40px;
+}
+
+.line{
+	width:60px;
+	height:0.5px;
+	background-color:rgb(127,127,127);
+	margin :7px auto 40px;
+}
+
+/*----- 共用 menu -----*/
+.menus{
+	display:flex;
+	justify-content:center;
+	width:1200px;
+	position:fixed;
+	z-index: 1;
+	background-color: white;
+}
+
+.list1{
+	display:flex;
+	justify-content:center;
+	width:600px;
+	margin-left: 120px;
+	margin-right:20px;
+}
+
+.list1 li{
+	writing-mode: vertical-lr;
+	letter-spacing:5px;
+	margin:10px 30px;
+	font-size:14px;
+}
+
+.icon{
+	display:inline-flex;
+	width:100px;
+	justify-content: space-between;
+	align-items:flex-end;
+
+}
+.icon a img{
+	margin-bottom:10px;
+}
+
+/*----- content1 -----*/
+.list{
+	background-color: rgb(231,229,221);
+	padding:150px 0 50px 0;
+
+}
+.lists{
+	width:900px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+}
+.lists > li{
+	display: flex;
+	text-align: left;
+	margin-bottom: 50px;
+}
+
+.list_1{
+	width: 400px;
+	margin-right: 40px;
+}
+
+main > h2{
+	display: inline;
+	margin-right:20px;
+	font-size: 18px;
+}
+main p{
+	padding-top: 20px;
+}
+
+.page > a{
+	display: inline;
+	margin:2px;
+}
+
+
+/*----- footer -----*/
+h3{
+	padding-top: 10px;
+}
+
+footer article{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+article > img{
+	width: auto;
+	height: 15px;
+	margin-right: 5px;
+}
