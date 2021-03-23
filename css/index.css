@@ -1,7 +1,7 @@
 @import url(reset.css);
 
 *{
-	/*outline: 1px solid orange;*/
+	 outline: 1px solid orange; 
 	font-family: "微軟正黑體";
 
 }
@@ -23,16 +23,6 @@ a{
 	color:black;
 }
 
-.icon{
-	display:inline-flex;
-	width:100px;
-	justify-content: space-between;
-	align-items:flex-end;
-}
-
-.icon a img{
-	margin-bottom:10px;
-}
 
 .footer{
 	background-color: rgb(220,216,206);
@@ -65,9 +55,7 @@ a{
 .bdc_white{
 	background-color: white;
 }
-.wrapper{
 
-}
 /*----- part1 -----*/
 
 .number1{
@@ -88,7 +76,7 @@ a{
 	justify-content:center;
 	
 	position: fixed;
-	z-index: 1;
+	z-index: 3;
 	width: 100%;
 	background-color: white;
 	transition: top 0.5s;
@@ -104,7 +92,7 @@ a{
 	display:flex;
 	justify-content: center;
 	width:600px;
-	margin-left: 120px;
+	margin-left: 140px;
 	margin-right: 20px;
 
 
@@ -122,6 +110,167 @@ a{
 
 }
 
+.icon{
+	display:inline-flex;
+	width:120px;
+	justify-content: space-around;
+	align-items:flex-end;
+
+}
+
+.icon a img{
+	margin-bottom:10px;
+	margin-right: 6px;
+}
+
+/*------------------------------------------------------*/
+
+.wrapper{
+	/*position: relative;*/
+}
+
+.content {
+ 
+ }
+
+ #menu_control{
+ 	position: absolute;
+ 	top: -50px;
+ 	z-index: -2;
+ }
+ .menu_btn{
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  /* background-color: rgba(255,255,255,.8); */
+  position: absolute;
+  top:3px;
+  right:10px;
+  /* box-shadow: 0 2px 2px  #976c60; */
+  display: none;
+ }
+
+ .menu_btn span{
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  display: block;
+  overflow: hidden;
+
+ }
+
+ .menu_btn::before{
+  content: '';
+  position: absolute;
+  height: 4px;
+  left: 4px;
+  width: 42px;
+  background-color: #C5B0AA;
+  border-radius: 40px;
+  top: 0; bottom:0;
+  margin: auto;
+  box-shadow: 0px 10px 0px #C5B0AA,
+     0px -10px 0px #C5B0AA;
+ }
+
+ .content .list_rwd{
+ 	position: absolute;
+ 	display: none;
+ }
+
+.content.topp{
+	/*outline: 	3px solid red;*/
+	width: 100%;
+	height: 15px;
+	position: fixed;
+}
+
+
+@media screen and (max-width: 767px){
+
+ .menu_btn{
+  display: block;
+ }
+
+
+ 
+ .menu_btn{
+  position: fixed;
+  top:5px;
+  right: 5px;
+  z-index: 5;
+ }
+
+ .topp .list_rwd{
+ 	display: block;
+ 	position: absolute;
+ 	width: 100%;
+ 	height: 100vh;
+ 	right: -120%;
+ 	top:0px;
+ 	
+ 	transition: 0.5s;
+ 	z-index: 3;
+
+ }
+ .topp .list_rwd li{
+ 	width: 100%;
+ 	height: 9vh;
+ 	background-color: rgba(255,255,255,.8);
+ 	margin-bottom: 2px;
+ }
+
+ .topp .list_rwd a{
+ 	height:100%;
+ 	line-height: 4;
+ 	font-size: 18px;
+ 	
+ }
+.topp .list_rwd a:hover {
+	color:rgb(160, 136, 91);
+}
+
+ .topp .list_rwd .logo{
+ 	/*padding: 20px;*/
+ }
+
+
+ #menu_control:checked ~ .list_rwd{
+ 	right: 0;
+ 	top: 0;
+ }
+
+
+
+ .list1 , .icon, .icon1 a{
+ 	display: none;
+ }
+ .list2 li a{
+ 	display: none;
+ }
+
+ .list2 .logo_ifrwd a{
+ 	display: inline-block;
+ }
+
+}
+
+
+.content.topp{
+	/*outline: 	3px solid red;*/
+	width: 100%;
+	height: 15px;
+	position: fixed;
+}
+
+.logo_list{
+	padding: 5vh 0 2vh 0; /* 改這裡 ~~~~!!*/
+}
+
+.list_rwd .logo_list a{
+	height:100%;
+}
+
 
 
 /*----- part2 -----*/
@@ -129,8 +278,6 @@ a{
 	display:flex;
 	justify-content: center;
 	width:600px;
-	margin-left: 120px;
-	margin-right:20px;
 }
 
 .list2 li{
@@ -155,10 +302,34 @@ a{
 
 .icon1{
 	display:inline-flex;
-	width:100px;
-	justify-content: space-between;
+	width:10%;
+	justify-content: flex-end;
 	align-items:flex-end;
 }
+
+.icon1 a{
+	margin-left: 5%;
+}
+
+
+.space{
+	display:inline-flex;
+	width:10%;
+	/*background-color: yellow;*/
+}
+@media screen and (max-width: 767px){
+	.icon1, .space{
+	display:none;
+	
+	}
+	.list2{
+	justify-content: center;
+	width:60%;
+	margin-left: 0;
+	margin-right: 0;
+	}
+}
+
 
 .icon1 a img{
 	margin-bottom:80px;
@@ -198,11 +369,29 @@ a{
 	/*line-height: 80px;*/
 }
 
+/*.icon1 img{
+		display: none;
+}*/
+
 
 /*----- part3 -----*/
+
 .list3 li{
 	margin-bottom: 20px;
-	background-size: cover;
+	height: 0;
+	padding: 6% 0 10%;
+	background-size: 100% auto;
+	background-position: center;
+	background-repeat: no-repeat;
+	display: flex;
+	justify-content: center;
+	transition:all 1s;
+
+}
+
+.list3 li:hover{
+	margin-bottom: 20px;
+	background-size: 120% auto;
 	background-position: center;
 	background-repeat: no-repeat;
 	display: flex;
@@ -210,20 +399,22 @@ a{
 
 }
 
+
 .list3 li a{
 	display: block;
 	width: 100%;
 }
 
 .list3 li img{
-	width: 50px;
-	padding-top: 73px;
-	margin-bottom: 10px;
+	width: 5%;
+	/*padding-top: 73px;*/
+	margin-bottom: 1%;
 }
 
 .list3 li p{
 	color: white;
-	padding-bottom: 73px;
+	font-size: 16px;
+	/*padding-bottom: 73px;*/
 }
 
 .meal{
@@ -239,7 +430,7 @@ a{
 
 
 .season{
-	position: relative;
+	
 }
 .season_pics{
 	display: flex;
@@ -268,8 +459,9 @@ a{
 }
 .icon_1 {
 	display:flex;
-	width:100px;
-	justify-content: space-between;
+	width:120px;
+	justify-content: space-around;
+	margin-right: 6px;
     
 }
 
@@ -349,12 +541,60 @@ a{
 	justify-content: space-around;
 }
 
+.input_1 li{
+ margin: 0 15px;
+}
+
 .input_2 > p{
 	font-size: 10px;
 
 }
 .input_2 > .input_2_1{
 	font-size: 18px;
+}
+
+@media screen and (max-width: 767px){
+
+	.input .input_1{
+	width: 80%;
+	flex-direction: column;
+	}
+	.input .input_1 + ul{
+	width: 80%;
+	}
+	.input .input_1 li{
+	margin-bottom: 3%;
+	}
+
+	.input .name{
+		width: 40%;
+		height: 25px;
+		border: 1px solid #ccc;
+		padding-left: 5px;
+		
+	}
+
+	.input .phone{
+		width: 40%;
+		height: 25px;
+		border: 1px solid #ccc;
+		padding-left: 5px;
+		
+	}
+
+	.input .address{
+		width: 90%;
+		height: 25px;
+		border: 1px solid #ccc;
+		padding-left: 5px;
+		
+	}
+	.list3 li p{
+	color: white;
+	font-size: 12px;
+	/*padding-bottom: 73px;*/
+}
+	.
 }
 /*----- part5 -----*/
 h3{

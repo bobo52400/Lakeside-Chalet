@@ -1,17 +1,16 @@
 @import url('reset.css');
 
-/**{outline: 1px solid orange;}*/
+*{outline: 1px solid orange;}
 
 /*----- 共用 -----*/
 .wrapper{
 	text-align: center;
-	width: 1200px;
 	margin: 0 auto;
 	font-family: "微軟正黑體";
 	padding-top: 0.1px;
 }
 .wrapper_1 {
-	width: 900px;
+	width: 75%;
 	margin: 0 auto;
 }
 
@@ -64,28 +63,40 @@ article > img{
 	width:40px;
 }
 
-.title{
+/*.title{
 	width:250px;
-}
-/*----- 共用 menu -----*/
-
-.menus{
+}*/
+/*========================================================*/
+/*--------- NavBar ---------*/
+.menus {
 	display:flex;
 	justify-content:center;
-	width:1200px;
-	position:fixed;
-	z-index: 1;
+	
+	position: fixed;
+	z-index: 3;
+	width: 100%;
 	background-color: white;
+	transition: top 0.5s;
+	/*top:-100px;*/
+}
 
+.menus img{
+	display:inline-block;
+	margin:0 auto;
 }
 
 .list1{
 	display:flex;
-	justify-content:center;
+	justify-content: center;
 	width:600px;
-	margin-left: 120px;
-	margin-right:20px;
+	margin-left: 140px;
+	margin-right: 20px;
 
+
+}
+.logo{
+	width:40px;
+	
 }
 
 .list1 li{
@@ -93,34 +104,163 @@ article > img{
 	letter-spacing:5px;
 	margin:10px 30px;
 	font-size:14px;
+
 }
 
 .icon{
 	display:inline-flex;
-	width:100px;
-	justify-content: space-between;
+	width:120px;
+	justify-content: space-around;
 	align-items:flex-end;
+
 }
 
 .icon a img{
 	margin-bottom:10px;
+	margin-right: 6px;
 }
 
-section > div{
-	display: inline-block;
-	width: 150px;
-	height: 30px;
-	border-radius: 30px;
-	margin: 20px auto;
-	border: 1px solid gray;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+
+/*------------------------------------------------------*/
+
+.wrapper{
+	/*position: relative;*/
 }
 
-section > div > img{
-	padding: 0 8px;
+.content {
+ 
+ }
+
+ #menu_control{
+ 	position: absolute;
+ 	top: -50px;
+ 	z-index: -2;
+ }
+ .menu_btn{
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  /* background-color: rgba(255,255,255,.8); */
+  position: absolute;
+  top:3px;
+  right:10px;
+  /* box-shadow: 0 2px 2px  #976c60; */
+  display: none;
+ }
+
+ .menu_btn span{
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  display: block;
+  overflow: hidden;
+
+ }
+
+ .menu_btn::before{
+  content: '';
+  position: absolute;
+  height: 4px;
+  left: 4px;
+  width: 42px;
+  background-color: #C5B0AA;
+  border-radius: 40px;
+  top: 0; bottom:0;
+  margin: auto;
+  box-shadow: 0px 10px 0px #C5B0AA,
+     0px -10px 0px #C5B0AA;
+ }
+
+ .content .list_rwd{
+ 	position: absolute;
+ 	display: none;
+ }
+
+.content.topp{
+	/*outline: 	3px solid red;*/
+	width: 100%;
+	height: 15px;
+	position: fixed;
 }
+
+
+@media screen and (max-width: 767px){
+
+ .menu_btn{
+  display: block;
+ }
+
+
+ 
+ .menu_btn{
+  position: fixed;
+  top:5px;
+  right: 5px;
+  z-index: 5;
+ }
+
+ .topp .list_rwd{
+ 	display: block;
+ 	position: absolute;
+ 	width: 100%;
+ 	height: 100vh;
+ 	right: -120%;
+ 	top:0px;
+ 	background-color: rgba(255,255,255,.8);
+ 	transition: 0.5s;
+ 	z-index: 3;
+
+ }
+ .topp .list_rwd li{
+ 	width: 100%;
+ 	height: 9vh;
+ 	background-color: rgba(255,255,255,.8);
+ 	margin-bottom: 2px;
+ }
+
+ .topp .list_rwd a{
+ 	height:100%;
+ 	line-height: 4;
+ 	font-size: 18px;
+ 	
+ }
+.topp .list_rwd a:hover {
+	color:rgb(160, 136, 91);
+}
+
+ .topp .list_rwd .logo{
+ 	/*padding: 20px;*/
+ }
+
+
+ #menu_control:checked ~ .list_rwd{
+ 	right: 0;
+ 	top: 0;
+ }
+
+
+ .list1 , .icon, .icon1 a{
+ 	display: none;
+ }
+
+}
+
+
+.content.topp{
+	/*outline: 	3px solid red;*/
+	width: 100%;
+	height: 15px;
+	position: fixed;
+}
+
+.logo_list{
+	padding: 5vh 0 2vh 0; /* 改這裡 ~~~~!!*/
+}
+
+.list_rwd .logo_list a{
+	height:100%;
+}
+/*========================================================*/
 
 /*----- index -----*/
 .index{
@@ -128,8 +268,14 @@ section > div > img{
 	padding:96px 0;
 }
 
+@media screen and (max-width: 767px){
+	.index{
+		padding-top: 50px;
+	}
+ }
+
 .img1{
-	width:900px;
+	width:75%;
 	margin-bottom: 50px;
 }
 
@@ -143,7 +289,7 @@ section > div > img{
 	padding-bottom:30px;
 }
 .line_2{
-	width:60px;
+	width:40px;
 	height:0.5px;
 	background-color:rgb(127,127,127);
 	margin :7px auto 40px;
@@ -170,6 +316,7 @@ section > div > img{
 	margin:0 auto;
 	display:flex;
 	justify-content: space-between;
+	max-width: 100%;
 
 }
 .icon1 li{
@@ -186,9 +333,15 @@ section > div > img{
 	margin-top:50px;
 }	
 .title_garden1{
-	height:120px;
+	width: 30.5%;
 }
+@media screen and (max-width: 640px){
 
+.title_garden1{
+	height: auto;
+	width: 40%;
+}
+}
 /*----- room-1 -----*/
 .room1_bgc{
 	background-color: rgb(231,229,221);
@@ -196,7 +349,7 @@ section > div > img{
 }
 
 .title_room1{
-	height: 120px;
+	max-width: 100%;
 	margin-top:50px;
 }
 
@@ -206,8 +359,9 @@ section > div > img{
 	padding-bottom: 80px;
 }
 .title_room2{
-	height: 120px;
+	/*height: 120px;*/
 	margin-top:50px;
+	max-width: 100%;
 }
 /*----- room-3 -----*/
 .room3_bgc{
@@ -216,7 +370,8 @@ section > div > img{
 }
 .title_room3{
 	margin-top:50px;
-	height: 120px;
+	/*height: 120px;*/
+	max-width: 100%;
 
 }
 /*----- garden & room -----*/
@@ -237,9 +392,23 @@ section > div > img{
 .room_1_1{
 	text-align: right;
 	margin-bottom: 63px;
+	max-width: 100%;
 }
+
+.room_1_1 img{
+	max-width: 100%;
+	/*width: 78%;*/
+}
+
+
+
 .room_1_2{
 	text-align: left;
+}
+
+.room_1_2 img{
+	max-width: 100%;
+	/*width: 78%;*/
 }
 
 .room_2_1{
@@ -264,3 +433,18 @@ section > div > img{
 	width: 100%;
 }
 
+
+@media screen and (min-width: 576px) and (max-width: 991px){
+
+	.wrapper_1{
+	width: 90%;
+	}
+}
+
+@media screen and (max-width: 575px){
+
+.wrapper_1{
+	width: 90%;
+}
+
+}
