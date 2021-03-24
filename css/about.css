@@ -189,7 +189,7 @@ footer > a > .logo{
  	height: 100vh;
  	right: -120%;
  	top:0px;
- 	background-color: rgba(255,255,255,.8);
+ 	
  	transition: 0.5s;
  	z-index: 3;
 
@@ -203,12 +203,13 @@ footer > a > .logo{
 
  .topp .list_rwd a{
  	height:100%;
- 	line-height: 4;
+ 	line-height: 3;
  	font-size: 18px;
  	
  }
 .topp .list_rwd a:hover {
 	color:rgb(160, 136, 91);
+	
 }
 
  .topp .list_rwd .logo{

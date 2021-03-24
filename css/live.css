@@ -206,7 +206,7 @@ article > img{
  	height: 100vh;
  	right: -120%;
  	top:0px;
- 	background-color: rgba(255,255,255,.8);
+ 	
  	transition: 0.5s;
  	z-index: 3;
 
@@ -220,12 +220,13 @@ article > img{
 
  .topp .list_rwd a{
  	height:100%;
- 	line-height: 4;
+ 	line-height: 3;
  	font-size: 18px;
  	
  }
 .topp .list_rwd a:hover {
 	color:rgb(160, 136, 91);
+	
 }
 
  .topp .list_rwd .logo{
@@ -294,6 +295,13 @@ article > img{
 	background-color:rgb(127,127,127);
 	margin :7px auto 40px;
 	
+}
+
+.line_3{
+	width:40px;
+	height:0.5px;
+	background-color:rgb(127,127,127);
+	margin :7px auto 40px;
 }
 
 .time{
@@ -470,7 +478,15 @@ article > img{
 	.room_2_4{
 		margin:0;
 	}
-	.line_2{
+	.time .line_3{
 		width:15px;
+	}
+	.garden_1{
+		width:100%;
+		margin:0 auto;
+	}
+	.garden_2{
+		width:100%;
+		margin:0 auto;
 	}
 }

@@ -195,7 +195,7 @@ article > img{
  	height: 100vh;
  	right: -120%;
  	top:0px;
- 	background-color: rgba(255,255,255,.8);
+ 	
  	transition: 0.5s;
  	z-index: 3;
 
@@ -209,12 +209,13 @@ article > img{
 
  .topp .list_rwd a{
  	height:100%;
- 	line-height: 4;
+ 	line-height: 3;
  	font-size: 18px;
  	
  }
 .topp .list_rwd a:hover {
 	color:rgb(160, 136, 91);
+	
 }
 
  .topp .list_rwd .logo{
@@ -251,8 +252,22 @@ article > img{
 }
 /*========================================================*/
 
+h2{
+	text-align: center;
+	line-height: 2.5;
+    font-size: 18px;
+    padding-top: 3%;
+}
 
-/*----- content1 -----*/
+.line1{
+	width:60px;
+	height:0.5px;
+	background-color:rgb(127,127,127);
+	margin :7px auto 40px;
+}
+
+
+/*---------------------------------------*/
 .bgc{
 	background-color: rgb(243,242,242);
 	padding-top: 100px;
@@ -264,6 +279,17 @@ article > img{
     padding-top: 30px;
 }
 }
+/*---------------------------------------*/
+/*----- content1 -----*/
+.line2{
+	width:90px;
+	height:0.5px;
+	background-color:rgb(127,127,127);
+	
+
+	margin: 100px 3%;
+	/*margin :7px auto 40px;*/
+}
 
 section{
 	display:flex;
@@ -273,38 +299,108 @@ section span{
 	writing-mode:vertical-lr;
 }
 section p{
-	width:100px;
+	line-height: 1.5;
+	text-align: left;
 } 
-
-section img{
-	width:700px;
-	margin:50px;
-}
 
 .content1{
 	padding-top: 50px;
 }
-.content1 ul{
-	display:flex;
-	justify-content:center;
-	overflow: hidden;
-}
-.content1 ul li{
-	margin-right: 15px;
-}
-
-.content2 ul{
-	display:flex;
-	justify-content:center;
-		overflow: hidden;
-}
 
 
-.map img{
-	width: 800px;
-	display: inline-block;
-	margin: 50px auto;
+/*------ content2 ------*/
+.content2 {
+	background-color: rgb(231,229,221);
+	padding-top: 3%;
 }
+/*-------- RWD ---------*/
+@media screen and (max-width: 767px){
+	section{
+		padding-left:3%;
+		padding-right: 3%; 
+	}
+}
+/*------------------ 輪播 -----------------*/
+
+ body {
+      position: relative;
+      height: 100%;
+    }
+
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+    .swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+      background-color: rgb(243,242,242);
+    }
+
+    .swiper-slide_1{
+    	background-color: rgb(231,229,221);
+    }
+
+	.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+      bottom: 10px;
+      left: 0;
+      width: 100%;
+      display: none;
+	}
+.swiper-slide img{
+	width: 60%;
+	padding: 3% 0 6%;
+
+}
+
+/*---- map ----*/
+iframe{
+	max-width: 90%;
+	padding-bottom: 5%;
+}
+
+/*------ footer ------*/
+
+@media screen and (max-width: 575px){
+	footer article + article + article > p{
+		
+}
+}
+
+
+
+
+
+
+
+
+
+
 
 * {box-sizing:border-box}
 
