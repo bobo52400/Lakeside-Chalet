@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <title>湖畔藝宿</title>
 </head>
 <body>
@@ -99,19 +100,24 @@
                         <li class="transport"><a href="transport.html"><img src="index_img/13.png" alt=""><p>行</p></a></li>
                     </ul>
                 </div>
-                <div class="season">
-                    <h1>春夏秋冬</h1>
-                    <div class="line"></div>
-                    <ul class="season_pics">
-                        <li><img src="img1/27.png" alt=""></li>
-                        <li><img src="img1/28.png" alt=""></li>
-                        <li><img src="img1/29.png" alt=""></li>
-                    </ul>
-<!--                     <ul class="icons_direction">
-                        <li class="back"><img src="index_img/Icon ionic-ios-arrow-back.png" alt=""></li>
-                        <li class="forward"><img src="index_img/Icon ionic-ios-arrow-forward.png" alt=""></li>
-                    </ul> -->
-                </div>
+
+
+            <div class="swiper-container">
+                <h1>春夏秋冬</h1>
+                <div class="line"></div>
+                <div class="swiper-wrapper">
+                      <div class="swiper-slide"><img src="img1/27.png" alt=""></div>
+                      <div class="swiper-slide"><img src="img1/28.png" alt=""></div>
+                      <div class="swiper-slide"><img src="img1/29.png" alt=""></div>
+
+                    </div>
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+            </div>
+
             </div>    
         </div>
 
@@ -194,7 +200,7 @@
     </div>
     </div>   
 
-
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
 // When the user scrolls down 20px from the top of the document, slide down the navbar
 
@@ -207,6 +213,36 @@ function scrollFunction() {
     document.getElementById("navbar").style.top = "-100px";
   }
 }
+
+
+     var swiper = new Swiper('.swiper-container', {
+          slidesPerView: 1,
+          // // spaceBetween: 20,
+          slidesPerGroup: 1,
+          cssMode: true,
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+          pagination: {
+            el: '.swiper-pagination'
+          },
+          mousewheel: true,
+          keyboard: true,
+          
+          breakpoints: {
+
+        1200: {
+         slidesPerView: 1,
+          // spaceBetween: 30,
+          slidesPerGroup: 1,
+          },
+            },
+          autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+          },
+        });
     </script>
 </body> 
 </html>
