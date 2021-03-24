@@ -282,6 +282,14 @@ footer > a > .logo{
 .ending{
 	margin-bottom: 30px;
 }
+
+.line_1{
+	width:80%;
+	height:0.2px;
+	background-color:rgb(127,127,127);
+	margin:0 auto;
+	margin-bottom:10%;
+}
 }
 
 

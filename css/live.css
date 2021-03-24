@@ -1,6 +1,6 @@
 @import url('reset.css');
 
-/* *{outline: 1px solid orange;} */
+ /**{outline: 1px solid orange;} */
 
 /*----- 共用 -----*/
 .wrapper{
@@ -443,8 +443,34 @@ article > img{
 
 @media screen and (max-width: 575px){
 
-.wrapper_1{
-	width: 90%;
-}
+	.wrapper_1{
+		width: 90%;
+	}
 
+	.index .img1{
+		width:100%;
+		margin-bottom: 50px;
+	}
+	.room_2_1{
+		float:none;
+		width:100%;
+		padding-bottom: 10%;
+	}
+	.room_2_2{
+		width: 100%;
+		float:none;
+		padding-bottom: 10%;
+		margin:0;
+	}
+	.room_2_3{
+		width: 100%;
+		float:none;
+		padding-bottom: 10%;
+	}
+	.room_2_4{
+		margin:0;
+	}
+	.line_2{
+		width:15px;
+	}
 }
