@@ -170,23 +170,24 @@ article > img{
 	width: 100%;
 	height: 15px;
 	position: fixed;
+	z-index: 50;
 }
 
 
 @media screen and (max-width: 767px){
 
- .menu_btn{
-  display: block;
- }
-
-
- 
- .menu_btn{
-  position: fixed;
-  top:5px;
-  right: 5px;
-  z-index: 5;
- }
+.bgc .content1 {
+    padding-top: 20px;
+}
+.menu_btn{
+ 	display: block;
+}
+.menu_btn{
+    position: fixed;
+	top:5px;
+	right: 5px;
+	z-index: 5;
+}
 
  .topp .list_rwd{
  	display: block;
@@ -234,8 +235,6 @@ article > img{
  }
 
 }
-
-
 .content.topp{
 	/*outline: 	3px solid red;*/
 	width: 100%;
@@ -251,6 +250,9 @@ article > img{
 	height:100%;
 }
 /*========================================================*/
+.list1_trans{
+  color:rgb(160, 136, 91);  
+}
 
 h2{
 	text-align: center;
@@ -314,11 +316,29 @@ section p{
 	padding-top: 3%;
 }
 /*-------- RWD ---------*/
-@media screen and (max-width: 767px){
-	section{
-		padding-left:3%;
-		padding-right: 3%; 
+@media screen and (max-width: 575px){
+	.content1 {
+    padding-top: 20px;
 	}
+
+	section{
+		padding-left:7%;
+		padding-right: 7%; 
+	}
+	.line2{
+	width:0;
+	height:0;
+	margin: 0px 3%;
+	}
+
+	.line4{
+	display:inline-block;
+	width:0.5px;
+	height:50px;
+	background-color:rgb(127,127,127);
+	margin: 3% 6%;
+    }
+   
 }
 /*------------------ 輪播 -----------------*/
 
@@ -372,11 +392,11 @@ section p{
       width: 100%;
       display: none;
 	}
-.swiper-slide img{
-	width: 60%;
+	.swiper-slide img{
+	width: 70%;
 	padding: 3% 0 6%;
 
-}
+	}
 
 /*---- map ----*/
 iframe{
@@ -402,7 +422,7 @@ iframe{
 
 
 
-* {box-sizing:border-box}
+/** {box-sizing:border-box}*/
 
 /* Slideshow container */
 .slideshow-container {
